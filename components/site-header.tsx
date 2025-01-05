@@ -75,35 +75,33 @@ export default function SiteHeader() {
   const [showFeatures, setShowFeatures] = React.useState(false);
 
   return (
-    <div className="h-screen bg-gray-900 text-gray-200">
-      <header className="sticky top-0 z-50  border-separate border-gray-700 bg-gray-800 rounded-full">
-        <div className="container max-w-7xl mx-auto flex h-20 items-center justify-evenly ">
+    <div className="h-screen bg-gray-900 text-white">
+      <header className="sticky top-2 z-10    bg-gradient-to-r from-black via-gray-700 to-black ">
+        <div className=" flex h-20 items-center justify-around">
         <Logo />
           <div className="flex items-center space-x-8 ">
-
-            
             <NavigationMenu className="hidden md:flex ">
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <Link href="/" legacyBehavior passHref>
-                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-gray-800 px-4 py-2 text-xl font-medium text-gray-200 transition-colors hover:bg-cyan-500 hover:text-black">
+                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center   px-4 py-2 text-xl font-medium text-gray-200 transition-colors hover:bg-cyan-500 hover:text-black rounded-full">
                       Home
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-gray-200 text-xl transition-colors hover:bg-cyan-500 hover:text-black">
+                  <NavigationMenuTrigger className="text-gray-200 text-xl transition-colors hover:bg-cyan-500 hover:text-black rounded-full">
                     Features
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[600px] p-4 bg-gray-700 rounded-lg">
-                      <div className="flex items-center justify-between mb-4 pb-2 border-b border-gray-600">
-                        <h4 className="text-lg font-medium text-white">
+                    <div className="w-[600px] p-4  bg-gradient-to-r from-violet-500 via-blue-500 to-violet-500 rounded-3xl">
+                      <div className="flex items-center justify-between mb-4 pb-2 border-b border-black">
+                        <h4 className="text-lg font-medium text-black">
                           Features
                         </h4>
                         <Link
                           href="/features"
-                          className="text-sm text-blue-400 hover:underline"
+                          className="text-sm text-black hover:underline"
                         >
                           View all
                         </Link>
@@ -118,14 +116,14 @@ export default function SiteHeader() {
                             className="block group"
                           >
                             <div className="flex items-start gap-4">
-                              <div className="p-2 bg-gray-600 rounded-md group-hover:bg-gray-500">
-                                <feature.icon className="h-6 w-6 text-blue-400" />
+                              <div className="p-2 bg-white rounded-md group-hover:bg-gray-900">
+                                <feature.icon className="h-6 w-6 text-violet-600" />
                               </div>
                               <div>
-                                <h5 className="font-medium mb-1 text-white group-hover:text-blue-400">
+                                <h5 className="font-medium mb-1 text-black group-hover:scale-110 transition-transform duration-300">
                                   {feature.title}
                                 </h5>
-                                <p className="text-sm text-gray-400 line-clamp-2">
+                                <p className="text-sm text-black line-clamp-2">
                                   {feature.description}
                                 </p>
                               </div>
@@ -134,13 +132,13 @@ export default function SiteHeader() {
                         ))}
                       </div>
                     
-                    <div className="mt-6 pt-4 border-t border-gray-600">
+                    <div className="mt-6 pt-4 border-t border-black">
                         <div className="flex items-center justify-between">
                           <div>
-                            <h4 className="font-medium mb-1 text-white">
+                            <h4 className="font-semibold mb-1 text-black">
                               Get started
                             </h4>
-                            <p className="text-sm text-gray-400 line-clamp-3">
+                            <p className="text-sm text-black line-clamp-3">
                             Streamline your school operations and empower educators, students, and parents with our all-in-one school management system.
                              From attendance tracking to fee management, performance analytics, and real-time notifications, everything you need is just a click away.
                              Start today and transform the way your school functions!
@@ -155,14 +153,14 @@ export default function SiteHeader() {
 
                 <NavigationMenuItem>
                   <Link href="/learn" legacyBehavior passHref>
-                    <NavigationMenuLink className="group text-xl inline-flex h-9 w-max items-center justify-center rounded-md bg-gray-800 px-4 py-2  font-medium text-gray-200 transition-colors hover:bg-cyan-500 hover:text-black">
+                    <NavigationMenuLink className="group text-xl inline-flex h-9 w-max items-center justify-center rounded-full  px-4 py-2  font-medium text-gray-200 transition-colors hover:bg-cyan-500 hover:text-black">
                       Learn
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link href="/academy" legacyBehavior passHref>
-                    <NavigationMenuLink className="group text-xl inline-flex h-9 w-max items-center justify-center rounded-md bg-gray-800 px-4 py-2  font-medium text-gray-200 transition-colors hover:bg-cyan-500 hover:text-black">
+                    <NavigationMenuLink className="group text-xl inline-flex h-9 w-max items-center justify-center rounded-full  px-4 py-2  font-medium text-gray-200 transition-colors hover:bg-cyan-500 hover:text-black">
                       Academy
                     </NavigationMenuLink>
                   </Link>
@@ -173,11 +171,11 @@ export default function SiteHeader() {
           <div className="hidden md:flex items-center space-x-4">
             <Button
               variant="ghost"
-              className="text-gray-200 transition-colors hover:bg-cyan-500 hover:text-black text-xl border-r"
+              className="text-gray-200 transition-colors hover:bg-cyan-500 hover:text-black text-xl border rounded-full"
             >
               Log in
             </Button>
-            <Button className=" text-white transition-colors hover:bg-cyan-500 hover:text-black text-xl border-l">
+            <Button className=" text-white transition-colors hover:bg-cyan-500 hover:text-black text-xl border rounded-full">
               Sign up
             </Button>
           </div>
