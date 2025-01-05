@@ -75,12 +75,12 @@ export default function SiteHeader() {
   const [showFeatures, setShowFeatures] = React.useState(false);
 
   return (
-    <div className="h-screen bg-gray-900 text-white">
-      <header className="sticky top-2 z-10    bg-gradient-to-r from-black via-gray-700 to-black ">
+    <div className="  bg-gray-900 text-white">
+      <header className="fixed top-0 left-0 right-0 z-20 bg-gradient-to-r from-black via-gray-700 to-black bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className=" flex h-20 items-center justify-around">
         <Logo />
-          <div className="flex items-center space-x-8 ">
-            <NavigationMenu className="hidden md:flex ">
+          <div className= "flex items-center space-x-8 ">
+            <NavigationMenu className=" hidden md:flex ">
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <Link href="/" legacyBehavior passHref>
